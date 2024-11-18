@@ -2,6 +2,7 @@
 import { ref } from 'vue';
 import CommonBtn from './components/CommonBtn.vue';
 import XSS from './XSS/XSS.vue';
+import CSRF from './CSRF/CSRF.vue';
 
 const typeOfAttack = ref<'xss' | 'csrf'>('xss');
 </script>
@@ -17,6 +18,7 @@ const typeOfAttack = ref<'xss' | 'csrf'>('xss');
       >
     </div>
     <XSS class="app__xss" v-if="typeOfAttack === 'xss'" />
+    <CSRF class="app__csrf" v-if="typeOfAttack === 'csrf'" />
   </div>
 </template>
 
